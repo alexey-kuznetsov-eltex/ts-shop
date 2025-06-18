@@ -1,5 +1,35 @@
-# Vue 3 + TypeScript + Vite
+# 🛍️ ts-shop
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**ts-shop** built with **Vue 3**, **TypeScript**, **Vite**, **PrimeVue**, and **Tailwind CSS**
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🌐 Live Demo
+
+👉 [https://alexey-kuznetsov-eltex.github.io/ts-shop/](https://alexey-kuznetsov-eltex.github.io/ts-shop/)
+
+## ⚙️ Tech Stack
+
+- **Vue 3**
+- **TypeScript**
+- **Vite**
+- **PrimeVue**
+- **Tailwind CSS**
+- **gh-pages**
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/ts-shop.git
+cd ts-shop
+npm install
+
+## 📜 Scripts
+
+The following npm scripts are available:
+
+| Script            | Description                                  |
+|-------------------|----------------------------------------------|
+| `npm run dev`     | Start the local development server           |
+| `npm run build`   | Build the project for production             |
+| `npm run preview` | Preview the production build locally         |
+| `npm run predeploy`| Run before deploying (builds the project)   |
+| `npm run deploy`  | Deploy the built project to GitHub Pages     |
