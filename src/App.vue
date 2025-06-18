@@ -176,7 +176,13 @@ onMounted(productsCategory)
           </div>
       </div>
       <div
-        v-if="!isLoading"
+        v-if="isLoading"
+        class="flex justify-center items-center min-w-[950px]"
+      >
+        <ProgressSpinner class="custom-spinner" />
+      </div>
+      <div
+        v-else-if="products.length > 0"
         class="product-grid"
       >
         <ProductCard
@@ -186,11 +192,13 @@ onMounted(productsCategory)
         />
       </div>
       <div
-        v-if="isLoading"
-        class="flex justify-center items-center min-w-[950px]"
+        v-else
+        class="flex justify-center items-start min-w-[950px]"
       >
-        <ProgressSpinner class="custom-spinner" />
-      </div>
+        <p class="mt-4 text-center text-xl max-w-[500px]">
+          No active products found. Try changing the search term or category, or refresh the page to try again.
+        </p>
+      </div>  
   </div>
   <div class="my-4 flex justify-center">
     <Paginator
