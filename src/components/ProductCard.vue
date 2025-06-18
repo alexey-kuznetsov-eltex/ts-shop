@@ -1,7 +1,8 @@
 <template>
   <Card>
     <template #header>
-      <img :src="product.images[0]" :alt="product.title" />
+      <img v-if="product.images[0]" :src="product.images[0]" :alt="product.title" />
+      <div v-else class="placeholder"></div>
     </template>
 
     <template #title>
@@ -20,12 +21,6 @@
         {{ product.description }}
       </p>
     </template>
-
-    <template #footer>
-      <div class="flex gap-4 mt-1">
-        <Button label="Add to Cart" class="w-full" />
-      </div>
-    </template>
   </Card>
 </template>
 
@@ -37,3 +32,12 @@ defineProps<{
   product: Product
 }>()
 </script>
+
+<style>
+.placeholder {
+  background-color: #d3d3d3;
+  width: 100%;
+  height: 303px;
+  border-radius: 12px 12px 0 0;
+}
+</style>
