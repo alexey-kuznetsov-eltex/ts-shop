@@ -83,8 +83,11 @@ const productsCategory = async () => {
   try {
     isLoading.value = true
     const response = await axios.get('https://dummyjson.com/products/categories')
-    console.log('categories', response)
-    categories.value = response.data
+    const categoriesList = response.data
+    categories.value = [
+      { slug: '', name: 'All' },
+      ...categoriesList,
+    ]
   } catch (error) {
     toast.add({
       severity: 'error',
